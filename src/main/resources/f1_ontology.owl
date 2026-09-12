@@ -1,0 +1,1704 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2026/3/untitled-ontology-7/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2026/3/untitled-ontology-7/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="http://f1-strategy.org/ontology#"
+     xmlns:untitled-ontology-7="http://www.semanticweb.org/user/ontologies/2026/3/untitled-ontology-7#">
+    <owl:Ontology rdf:about="http://f1-strategy.org/ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://f1-strategy.org/ontology#belongsToTeam -->
+
+    <owl:ObjectProperty rdf:about="http://f1-strategy.org/ontology#belongsToTeam">
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Car"/>
+        <rdfs:range rdf:resource="http://f1-strategy.org/ontology#Team"/>
+        <rdfs:comment xml:lang="en">Object property representing the relation belongs to team in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">belongsToTeam</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#drivesCar -->
+
+    <owl:ObjectProperty rdf:about="http://f1-strategy.org/ontology#drivesCar">
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <rdfs:range rdf:resource="http://f1-strategy.org/ontology#Car"/>
+        <rdfs:comment xml:lang="en">Object property representing the relation drives car in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">drivesCar</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#drivesFor -->
+
+    <owl:ObjectProperty rdf:about="http://f1-strategy.org/ontology#drivesFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <rdfs:range rdf:resource="http://f1-strategy.org/ontology#Team"/>
+        <rdfs:comment xml:lang="en">Object property representing the relation drives for in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">drivesFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#hasCircuit -->
+
+    <owl:ObjectProperty rdf:about="http://f1-strategy.org/ontology#hasCircuit">
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <rdfs:range rdf:resource="http://f1-strategy.org/ontology#Circuit"/>
+        <rdfs:comment xml:lang="en">Object property representing the relation has circuit in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasCircuit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#hasDrivingStyle -->
+
+    <owl:ObjectProperty rdf:about="http://f1-strategy.org/ontology#hasDrivingStyle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <rdfs:range rdf:resource="http://f1-strategy.org/ontology#DrivingStylе"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#hasFocusDriver -->
+
+    <owl:ObjectProperty rdf:about="http://f1-strategy.org/ontology#hasFocusDriver">
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <rdfs:range rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <rdfs:comment xml:lang="en">Object property representing the focus driver of a race.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasFocusDriver</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#hasLap -->
+
+    <owl:ObjectProperty rdf:about="http://f1-strategy.org/ontology#hasLap">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <rdfs:range rdf:resource="http://f1-strategy.org/ontology#Lap"/>
+        <rdfs:comment xml:lang="en">Object property representing the relation has lap in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasLap</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://f1-strategy.org/ontology#hasParticipant">
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <rdfs:range rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <rdfs:comment xml:lang="en">Object property representing the relation has participant in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#hasStrategy -->
+
+    <owl:ObjectProperty rdf:about="http://f1-strategy.org/ontology#hasStrategy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <rdfs:range rdf:resource="http://f1-strategy.org/ontology#Strategy"/>
+        <rdfs:comment xml:lang="en">Object property representing the relation has strategy in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasStrategy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#hasTelemetry -->
+
+    <owl:ObjectProperty rdf:about="http://f1-strategy.org/ontology#hasTelemetry">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Lap"/>
+        <rdfs:range rdf:resource="http://f1-strategy.org/ontology#Telemetry"/>
+        <rdfs:comment xml:lang="en">Object property representing the relation has telemetry in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasTelemetry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#hasTrackCondition -->
+
+    <owl:ObjectProperty rdf:about="http://f1-strategy.org/ontology#hasTrackCondition">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <rdfs:range rdf:resource="http://f1-strategy.org/ontology#TrackCondition"/>
+        <rdfs:comment xml:lang="en">Object property representing the relation has track condition in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasTrackCondition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#hasTyre -->
+
+    <owl:ObjectProperty rdf:about="http://f1-strategy.org/ontology#hasTyre">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Strategy"/>
+        <rdfs:range rdf:resource="http://f1-strategy.org/ontology#Tyre"/>
+        <rdfs:comment xml:lang="en">Object property representing the relation has tyre in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasTyre</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#hasWeather -->
+
+    <owl:ObjectProperty rdf:about="http://f1-strategy.org/ontology#hasWeather">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <rdfs:range rdf:resource="http://f1-strategy.org/ontology#WeatherCondition"/>
+        <rdfs:comment xml:lang="en">Object property representing the relation has weather in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasWeather</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdfs:comment xml:lang="en">Object property representing the relation top object property in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">topObjectProperty</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://f1-strategy.org/ontology#airTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://f1-strategy.org/ontology#airTemperature">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Data property representing air temperature in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">airTemperature</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#carPerformance -->
+
+    <owl:DatatypeProperty rdf:about="http://f1-strategy.org/ontology#carPerformance">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Car"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Data property representing car performance in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">carPerformance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#criticalGripThreshold -->
+
+    <owl:DatatypeProperty rdf:about="http://f1-strategy.org/ontology#criticalGripThreshold">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#DrivingStylе"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Data property representing critical grip threshold in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">criticalGripThreshold</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#driverSkill -->
+
+    <owl:DatatypeProperty rdf:about="http://f1-strategy.org/ontology#driverSkill">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Data property representing driver skill in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">driverSkill</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#fuelLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://f1-strategy.org/ontology#fuelLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Data property representing fuel level in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">fuelLevel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#gripLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://f1-strategy.org/ontology#gripLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#TrackCondition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Data property representing grip level in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">gripLevel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#intermediateThreshold -->
+
+    <owl:DatatypeProperty rdf:about="http://f1-strategy.org/ontology#intermediateThreshold">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#DrivingStylе"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Data property representing intermediate threshold in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">intermediateThreshold</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#lapTime -->
+
+    <owl:DatatypeProperty rdf:about="http://f1-strategy.org/ontology#lapTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Data property representing lap time in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">lapTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#laps -->
+
+    <owl:DatatypeProperty rdf:about="http://f1-strategy.org/ontology#laps">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Data property representing laps in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">laps</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#pitStops -->
+
+    <owl:DatatypeProperty rdf:about="http://f1-strategy.org/ontology#pitStops">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Strategy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Data property representing pit stops in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">pitStops</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#rainProbability -->
+
+    <owl:DatatypeProperty rdf:about="http://f1-strategy.org/ontology#rainProbability">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="en">Data property representing rain probability in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">rainProbability</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#trackTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://f1-strategy.org/ontology#trackTemperature">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Data property representing track temperature in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">trackTemperature</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#tyreTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://f1-strategy.org/ontology#tyreTemperature">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Data property representing tyre temperature in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">tyreTemperature</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#tyreWear -->
+
+    <owl:DatatypeProperty rdf:about="http://f1-strategy.org/ontology#tyreWear">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Data property representing tyre wear in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">tyreWear</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#wearThreshold -->
+
+    <owl:DatatypeProperty rdf:about="http://f1-strategy.org/ontology#wearThreshold">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#DrivingStylе"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Data property representing wear threshold in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">wearThreshold</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#wetThreshold -->
+
+    <owl:DatatypeProperty rdf:about="http://f1-strategy.org/ontology#wetThreshold">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://f1-strategy.org/ontology#DrivingStylе"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Data property representing wet threshold in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">wetThreshold</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:comment xml:lang="en">Data property representing top data property in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">topDataProperty</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Car -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Car">
+        <rdfs:comment xml:lang="en">Class representing car in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Car</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Circuit -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Circuit">
+        <rdfs:comment xml:lang="en">Class representing circuit in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Circuit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Cloudy -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Cloudy">
+        <rdfs:subClassOf rdf:resource="http://f1-strategy.org/ontology#WeatherCondition"/>
+        <owl:disjointWith rdf:resource="http://f1-strategy.org/ontology#Rainy"/>
+        <owl:disjointWith rdf:resource="http://f1-strategy.org/ontology#Sunny"/>
+        <rdfs:comment xml:lang="en">Class representing cloudy in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cloudy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Driver -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Driver">
+        <rdfs:comment xml:lang="en">Class representing driver in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Driver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#DrivingStylе -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#DrivingStylе">
+        <rdfs:comment xml:lang="en">Class representing driving stylе in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">DrivingStylе</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#DryRace -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#DryRace">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://f1-strategy.org/ontology#hasWeather"/>
+                <owl:someValuesFrom rdf:resource="http://f1-strategy.org/ontology#Sunny"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <owl:disjointWith rdf:resource="http://f1-strategy.org/ontology#WetRace"/>
+        <rdfs:comment xml:lang="en">Class representing dry race in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">DryRace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#DryTrack -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#DryTrack">
+        <rdfs:subClassOf rdf:resource="http://f1-strategy.org/ontology#TrackCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Hard -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Hard">
+        <rdfs:subClassOf rdf:resource="http://f1-strategy.org/ontology#Tyre"/>
+        <rdfs:comment xml:lang="en">Class representing hard in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#HighSkillDriver -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#HighSkillDriver">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://f1-strategy.org/ontology#Driver"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://f1-strategy.org/ontology#driverSkill"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <rdfs:comment xml:lang="en">Class representing high skill driver in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">HighSkillDriver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Intermediate -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Intermediate">
+        <rdfs:subClassOf rdf:resource="http://f1-strategy.org/ontology#Tyre"/>
+        <rdfs:comment xml:lang="en">Class representing intermediate in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Intermediate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Lap -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Lap">
+        <rdfs:comment xml:lang="en">Class representing lap in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lap</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#LongRace -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#LongRace">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://f1-strategy.org/ontology#Race"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://f1-strategy.org/ontology#laps"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <rdfs:comment xml:lang="en">Class representing long race in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">LongRace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Medium -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Medium">
+        <rdfs:subClassOf rdf:resource="http://f1-strategy.org/ontology#Tyre"/>
+        <rdfs:comment xml:lang="en">Class representing medium in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#MixedTrack -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#MixedTrack">
+        <rdfs:subClassOf rdf:resource="http://f1-strategy.org/ontology#TrackCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#PitStop -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#PitStop">
+        <rdfs:comment xml:lang="en">Class representing pit stop in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">PitStop</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Race -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Race">
+        <rdfs:comment xml:lang="en">Class representing race in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Race</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#RaceEvent -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#RaceEvent">
+        <rdfs:comment xml:lang="en">Class representing race event in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">RaceEvent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Rainy -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Rainy">
+        <rdfs:subClassOf rdf:resource="http://f1-strategy.org/ontology#WeatherCondition"/>
+        <owl:disjointWith rdf:resource="http://f1-strategy.org/ontology#Sunny"/>
+        <rdfs:comment xml:lang="en">Class representing rainy in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rainy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Soft -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Soft">
+        <rdfs:subClassOf rdf:resource="http://f1-strategy.org/ontology#Tyre"/>
+        <rdfs:comment xml:lang="en">Class representing soft in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Soft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Strategy -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Strategy">
+        <rdfs:comment xml:lang="en">Class representing strategy in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Strategy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Sunny -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Sunny">
+        <rdfs:subClassOf rdf:resource="http://f1-strategy.org/ontology#WeatherCondition"/>
+        <rdfs:comment xml:lang="en">Class representing sunny in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sunny</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Team -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Team">
+        <rdfs:comment xml:lang="en">Class representing team in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Team</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Telemetry -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Telemetry">
+        <rdfs:comment xml:lang="en">Class representing telemetry in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Telemetry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#TrackCondition -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#TrackCondition">
+        <rdfs:comment xml:lang="en">Class representing track condition in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">TrackCondition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Tyre -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Tyre">
+        <rdfs:comment xml:lang="en">Class representing tyre in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tyre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#WeatherCondition -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#WeatherCondition">
+        <rdfs:comment xml:lang="en">Class representing weather condition in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">WeatherCondition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Wet -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#Wet">
+        <rdfs:subClassOf rdf:resource="http://f1-strategy.org/ontology#Tyre"/>
+        <rdfs:comment xml:lang="en">Class representing wet in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Wet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#WetRace -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#WetRace">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://f1-strategy.org/ontology#hasWeather"/>
+                <owl:someValuesFrom rdf:resource="http://f1-strategy.org/ontology#Rainy"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <rdfs:comment xml:lang="en">Class representing wet race in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">WetRace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#WetTrack -->
+
+    <owl:Class rdf:about="http://f1-strategy.org/ontology#WetTrack">
+        <rdfs:subClassOf rdf:resource="http://f1-strategy.org/ontology#TrackCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://f1-strategy.org/ontology#A525 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#A525">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Car"/>
+        <ontology:belongsToTeam rdf:resource="http://f1-strategy.org/ontology#Alpine"/>
+        <ontology:carPerformance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</ontology:carPerformance>
+        <rdfs:comment xml:lang="en">Individual representing a525 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">A525</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#AMR25 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#AMR25">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Car"/>
+        <ontology:belongsToTeam rdf:resource="http://f1-strategy.org/ontology#AstonMartin"/>
+        <ontology:carPerformance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</ontology:carPerformance>
+        <rdfs:comment xml:lang="en">Individual representing amr25 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">AMR25</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Aggressive -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Aggressive">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#DrivingStylе"/>
+        <ontology:criticalGripThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">22.0</ontology:criticalGripThreshold>
+        <ontology:intermediateThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">45.0</ontology:intermediateThreshold>
+        <ontology:wearThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">78.0</ontology:wearThreshold>
+        <ontology:wetThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">75.0</ontology:wetThreshold>
+        <rdfs:comment xml:lang="en">Individual representing aggressive in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Aggressive</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Albon -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Albon">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#FW47"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#Williams"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Conservative"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing albon in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Albon</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Alonso -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Alonso">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#AMR25"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#AstonMartin"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Balanced"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing alonso in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Alonso</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Alpine -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Alpine">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Team"/>
+        <rdfs:comment xml:lang="en">Individual representing alpine in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Alpine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Antonelli -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Antonelli">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#W15"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#Mercedes"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Conservative"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing antonelli in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Antonelli</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#AstonMartin -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#AstonMartin">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Team"/>
+        <rdfs:comment xml:lang="en">Individual representing aston martin in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">AstonMartin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Austria -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Austria">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Circuit"/>
+        <rdfs:comment xml:lang="en">Individual representing austria in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Austria</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Balanced -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Balanced">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#DrivingStylе"/>
+        <ontology:criticalGripThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">30.0</ontology:criticalGripThreshold>
+        <ontology:intermediateThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.0</ontology:intermediateThreshold>
+        <ontology:wearThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">70.0</ontology:wearThreshold>
+        <ontology:wetThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">70.0</ontology:wetThreshold>
+        <rdfs:comment xml:lang="en">Individual representing balanced in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Balanced</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Bearman -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Bearman">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#VF-26"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#Haas"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Conservative"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing bearman in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bearman</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Bortoleto -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Bortoleto">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#C45"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#Sauber"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Conservative"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing bortoleto in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bortoleto</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#C45 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#C45">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Car"/>
+        <ontology:belongsToTeam rdf:resource="http://f1-strategy.org/ontology#Sauber"/>
+        <ontology:carPerformance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">86</ontology:carPerformance>
+        <rdfs:comment xml:lang="en">Individual representing c45 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">C45</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#CloudyWeather -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#CloudyWeather">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Cloudy"/>
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#WeatherCondition"/>
+        <rdfs:comment xml:lang="en">Individual representing cloudy weather in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">CloudyWeather</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Colapinto -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Colapinto">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#A525"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#Alpine"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Conservative"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing colapinto in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Colapinto</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Conservative -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Conservative">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#DrivingStylе"/>
+        <ontology:criticalGripThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">38.0</ontology:criticalGripThreshold>
+        <ontology:intermediateThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">35.0</ontology:intermediateThreshold>
+        <ontology:wearThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">62.0</ontology:wearThreshold>
+        <ontology:wetThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">65.0</ontology:wetThreshold>
+        <rdfs:comment xml:lang="en">Individual representing conservative in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Conservative</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#DryTrack -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#DryTrack">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#TrackCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#FW47 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#FW47">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Car"/>
+        <ontology:belongsToTeam rdf:resource="http://f1-strategy.org/ontology#Williams"/>
+        <ontology:carPerformance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</ontology:carPerformance>
+        <rdfs:comment xml:lang="en">Individual representing fw47 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">FW47</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Ferrari -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Ferrari">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Team"/>
+        <rdfs:comment xml:lang="en">Individual representing ferrari in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ferrari</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Gasly -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Gasly">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#A525"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#Alpine"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Balanced"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing gasly in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gasly</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Haas -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Haas">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Team"/>
+        <rdfs:comment xml:lang="en">Individual representing haas in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Haas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Hadjar -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Hadjar">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#VCARB02"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#RacingBulls"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Conservative"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing hadjar in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hadjar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Hamilton -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Hamilton">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#SF24"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#Ferrari"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Balanced"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing hamilton in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hamilton</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#HardTyre -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#HardTyre">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Hard"/>
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Tyre"/>
+        <rdfs:comment xml:lang="en">Individual representing hard tyre in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">HardTyre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Hulkenberg -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Hulkenberg">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#C45"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#Sauber"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Balanced"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing hulkenberg in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hulkenberg</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#IntermediateTyre -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#IntermediateTyre">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Intermediate"/>
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Tyre"/>
+        <rdfs:comment xml:lang="en">Individual representing intermediate tyre in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">IntermediateTyre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Lawson -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Lawson">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#VCARB02"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#RacingBulls"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Conservative"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing lawson in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lawson</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Leclerc -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Leclerc">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#SF24"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#Ferrari"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Aggressive"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing leclerc in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Leclerc</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#MCL39 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#MCL39">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Car"/>
+        <ontology:belongsToTeam rdf:resource="http://f1-strategy.org/ontology#McLaren"/>
+        <ontology:carPerformance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">98</ontology:carPerformance>
+        <rdfs:comment xml:lang="en">Individual representing mcl39 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">MCL39</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#McLaren -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#McLaren">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Team"/>
+        <rdfs:comment xml:lang="en">Individual representing mc laren in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">McLaren</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#MediumTyre -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#MediumTyre">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Medium"/>
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Tyre"/>
+        <rdfs:comment xml:lang="en">Individual representing medium tyre in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">MediumTyre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Mercedes -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Mercedes">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Team"/>
+        <rdfs:comment xml:lang="en">Individual representing mercedes in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mercedes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#MixedTrack -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#MixedTrack">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#TrackCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Monaco -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Monaco">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Circuit"/>
+        <rdfs:comment xml:lang="en">Individual representing monaco in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Monaco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Montreal -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Montreal">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Circuit"/>
+        <rdfs:comment xml:lang="en">Individual representing montreal in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Montreal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Monza -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Monza">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Circuit"/>
+        <rdfs:comment xml:lang="en">Individual representing monza in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Monza</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Norris -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Norris">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#MCL39"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#McLaren"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Aggressive"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing norris in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Norris</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Ocon -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Ocon">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#VF-26"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#Haas"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Balanced"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">86</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing ocon in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ocon</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Piastri -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Piastri">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#MCL39"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#McLaren"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Balanced"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing piastri in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Piastri</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#RB20 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#RB20">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Car"/>
+        <ontology:belongsToTeam rdf:resource="http://f1-strategy.org/ontology#RedBull"/>
+        <ontology:carPerformance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</ontology:carPerformance>
+        <rdfs:comment xml:lang="en">Individual representing rb20 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">RB20</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Race1 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Race1">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <ontology:hasCircuit rdf:resource="http://f1-strategy.org/ontology#Monaco"/>
+        <ontology:hasFocusDriver rdf:resource="http://f1-strategy.org/ontology#Verstappen"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Albon"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Alonso"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Antonelli"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Bearman"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Bortoleto"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Colapinto"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Gasly"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Hadjar"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Hamilton"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Hulkenberg"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Lawson"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Leclerc"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Norris"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Ocon"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Piastri"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Russell"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Sainz"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Stroll"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Tsunoda"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Verstappen"/>
+        <ontology:hasStrategy rdf:resource="http://f1-strategy.org/ontology#Strategy1"/>
+        <ontology:hasTrackCondition rdf:resource="http://f1-strategy.org/ontology#DryTrack"/>
+        <ontology:hasWeather rdf:resource="http://f1-strategy.org/ontology#SunnyWeather"/>
+        <ontology:airTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">30.0</ontology:airTemperature>
+        <ontology:laps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">53</ontology:laps>
+        <rdfs:comment xml:lang="en">Individual representing race1 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Race1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Race2 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Race2">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <ontology:hasCircuit rdf:resource="http://f1-strategy.org/ontology#Montreal"/>
+        <ontology:hasFocusDriver rdf:resource="http://f1-strategy.org/ontology#Leclerc"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Albon"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Alonso"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Antonelli"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Bearman"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Bortoleto"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Colapinto"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Gasly"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Hadjar"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Hamilton"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Hulkenberg"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Lawson"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Leclerc"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Norris"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Ocon"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Piastri"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Russell"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Sainz"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Stroll"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Tsunoda"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Verstappen"/>
+        <ontology:hasStrategy rdf:resource="http://f1-strategy.org/ontology#Strategy2"/>
+        <ontology:hasTrackCondition rdf:resource="http://f1-strategy.org/ontology#WetTrack"/>
+        <ontology:hasWeather rdf:resource="http://f1-strategy.org/ontology#RainyWeather"/>
+        <ontology:airTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">18.0</ontology:airTemperature>
+        <ontology:laps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57</ontology:laps>
+        <rdfs:comment xml:lang="en">Individual representing race2 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Race2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Race3 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Race3">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <ontology:hasCircuit rdf:resource="http://f1-strategy.org/ontology#Silverstone"/>
+        <ontology:hasFocusDriver rdf:resource="http://f1-strategy.org/ontology#Antonelli"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Albon"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Alonso"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Antonelli"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Bearman"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Bortoleto"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Colapinto"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Gasly"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Hadjar"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Hamilton"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Hulkenberg"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Lawson"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Leclerc"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Norris"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Ocon"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Piastri"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Russell"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Sainz"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Stroll"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Tsunoda"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Verstappen"/>
+        <ontology:hasTrackCondition rdf:resource="http://f1-strategy.org/ontology#DryTrack"/>
+        <ontology:hasWeather rdf:resource="http://f1-strategy.org/ontology#CloudyWeather"/>
+        <ontology:airTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">20.0</ontology:airTemperature>
+        <ontology:laps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</ontology:laps>
+        <rdfs:comment xml:lang="en">Individual representing race3 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Race3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Race4 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Race4">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <ontology:hasCircuit rdf:resource="http://f1-strategy.org/ontology#Austria"/>
+        <ontology:hasFocusDriver rdf:resource="http://f1-strategy.org/ontology#Ocon"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Albon"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Alonso"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Antonelli"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Bearman"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Bortoleto"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Colapinto"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Gasly"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Hadjar"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Hamilton"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Hulkenberg"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Lawson"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Leclerc"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Norris"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Ocon"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Piastri"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Russell"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Sainz"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Stroll"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Tsunoda"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Verstappen"/>
+        <ontology:hasTrackCondition rdf:resource="http://f1-strategy.org/ontology#DryTrack"/>
+        <ontology:hasWeather rdf:resource="http://f1-strategy.org/ontology#SunnyWeather"/>
+        <ontology:airTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.0</ontology:airTemperature>
+        <ontology:laps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</ontology:laps>
+        <rdfs:comment xml:lang="en">Individual representing race4 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Race4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Race5 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Race5">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Race"/>
+        <ontology:hasCircuit rdf:resource="http://f1-strategy.org/ontology#Monza"/>
+        <ontology:hasFocusDriver rdf:resource="http://f1-strategy.org/ontology#Verstappen"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Albon"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Alonso"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Antonelli"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Bearman"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Bortoleto"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Colapinto"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Gasly"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Hadjar"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Hamilton"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Hulkenberg"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Lawson"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Leclerc"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Norris"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Ocon"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Piastri"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Russell"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Sainz"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Stroll"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Tsunoda"/>
+        <ontology:hasParticipant rdf:resource="http://f1-strategy.org/ontology#Verstappen"/>
+        <ontology:hasTrackCondition rdf:resource="http://f1-strategy.org/ontology#WetTrack"/>
+        <ontology:hasWeather rdf:resource="http://f1-strategy.org/ontology#RainyWeather"/>
+        <ontology:airTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">18.0</ontology:airTemperature>
+        <ontology:laps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</ontology:laps>
+        <rdfs:comment xml:lang="en">Individual representing race5 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Race5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#RacingBulls -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#RacingBulls">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Team"/>
+        <rdfs:comment xml:lang="en">Individual representing racing bulls in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">RacingBulls</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#RainyWeather -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#RainyWeather">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Rainy"/>
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#WeatherCondition"/>
+        <rdfs:comment xml:lang="en">Individual representing rainy weather in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">RainyWeather</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#RedBull -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#RedBull">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Team"/>
+        <rdfs:comment xml:lang="en">Individual representing red bull in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">RedBull</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Russell -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Russell">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#W15"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#Mercedes"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Balanced"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing russell in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Russell</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#SF24 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#SF24">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Car"/>
+        <ontology:belongsToTeam rdf:resource="http://f1-strategy.org/ontology#Ferrari"/>
+        <ontology:carPerformance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">97</ontology:carPerformance>
+        <rdfs:comment xml:lang="en">Individual representing sf24 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">SF24</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Sainz -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Sainz">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#FW47"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#Williams"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Balanced"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing sainz in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sainz</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Sauber -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Sauber">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Team"/>
+        <rdfs:comment xml:lang="en">Individual representing sauber in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sauber</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Silverstone -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Silverstone">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Circuit"/>
+        <rdfs:comment xml:lang="en">Individual representing silverstone in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Silverstone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#SoftTyre -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#SoftTyre">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Soft"/>
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Tyre"/>
+        <rdfs:comment xml:lang="en">Individual representing soft tyre in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">SoftTyre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Strategy1 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Strategy1">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Strategy"/>
+        <ontology:hasTyre rdf:resource="http://f1-strategy.org/ontology#MediumTyre"/>
+        <ontology:pitStops rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ontology:pitStops>
+        <rdfs:comment xml:lang="en">Individual representing strategy1 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Strategy1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Strategy2 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Strategy2">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Strategy"/>
+        <ontology:hasTyre rdf:resource="http://f1-strategy.org/ontology#WetTyre"/>
+        <ontology:pitStops rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontology:pitStops>
+        <rdfs:comment xml:lang="en">Individual representing strategy2 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Strategy2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Stroll -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Stroll">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#AMR25"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#AstonMartin"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Conservative"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing stroll in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Stroll</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#SunnyWeather -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#SunnyWeather">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Sunny"/>
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#WeatherCondition"/>
+        <rdfs:comment xml:lang="en">Individual representing sunny weather in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">SunnyWeather</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Tsunoda -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Tsunoda">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#RB20"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#RedBull"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Balanced"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">86</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing tsunoda in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tsunoda</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#VCARB02 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#VCARB02">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Car"/>
+        <ontology:belongsToTeam rdf:resource="http://f1-strategy.org/ontology#RacingBulls"/>
+        <ontology:carPerformance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</ontology:carPerformance>
+        <rdfs:comment xml:lang="en">Individual representing vcarb02 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">VCARB02</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#VF-26 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#VF-26">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Car"/>
+        <ontology:belongsToTeam rdf:resource="http://f1-strategy.org/ontology#Haas"/>
+        <ontology:carPerformance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</ontology:carPerformance>
+        <rdfs:comment xml:lang="en">Individual representing vf-26 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">VF-26</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Verstappen -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Verstappen">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Driver"/>
+        <ontology:drivesCar rdf:resource="http://f1-strategy.org/ontology#RB20"/>
+        <ontology:drivesFor rdf:resource="http://f1-strategy.org/ontology#RedBull"/>
+        <ontology:hasDrivingStyle rdf:resource="http://f1-strategy.org/ontology#Aggressive"/>
+        <ontology:driverSkill rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</ontology:driverSkill>
+        <rdfs:comment xml:lang="en">Individual representing verstappen in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Verstappen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#W15 -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#W15">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Car"/>
+        <ontology:belongsToTeam rdf:resource="http://f1-strategy.org/ontology#Mercedes"/>
+        <ontology:carPerformance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</ontology:carPerformance>
+        <rdfs:comment xml:lang="en">Individual representing w15 in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">W15</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#WetTrack -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#WetTrack">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#TrackCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#WetTyre -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#WetTyre">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Tyre"/>
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Wet"/>
+        <rdfs:comment xml:lang="en">Individual representing wet tyre in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">WetTyre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://f1-strategy.org/ontology#Williams -->
+
+    <owl:NamedIndividual rdf:about="http://f1-strategy.org/ontology#Williams">
+        <rdf:type rdf:resource="http://f1-strategy.org/ontology#Team"/>
+        <rdfs:comment xml:lang="en">Individual representing williams in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Williams</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://f1-strategy.org/ontology#DryTrack">
+        <rdfs:comment xml:lang="en">Class representing dry track in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">DryTrack</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://f1-strategy.org/ontology#MixedTrack">
+        <rdfs:comment xml:lang="en">Class representing mixed track in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">MixedTrack</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://f1-strategy.org/ontology#WetTrack">
+        <rdfs:comment xml:lang="en">Class representing wet track in the Formula 1 strategy ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">WetTrack</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://f1-strategy.org/ontology#Car"/>
+            <rdf:Description rdf:about="http://f1-strategy.org/ontology#Circuit"/>
+            <rdf:Description rdf:about="http://f1-strategy.org/ontology#Driver"/>
+            <rdf:Description rdf:about="http://f1-strategy.org/ontology#Race"/>
+            <rdf:Description rdf:about="http://f1-strategy.org/ontology#Strategy"/>
+            <rdf:Description rdf:about="http://f1-strategy.org/ontology#Team"/>
+            <rdf:Description rdf:about="http://f1-strategy.org/ontology#TrackCondition"/>
+            <rdf:Description rdf:about="http://f1-strategy.org/ontology#Tyre"/>
+            <rdf:Description rdf:about="http://f1-strategy.org/ontology#WeatherCondition"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

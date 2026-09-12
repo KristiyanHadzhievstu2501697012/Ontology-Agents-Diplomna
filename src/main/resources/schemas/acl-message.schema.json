@@ -1,0 +1,362 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "F1 Multi-Agent ACL Message Schema",
+  "type": "object",
+
+  "anyOf": [
+    {
+      "title": "Track Request",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "TRACK_REQUEST"
+        },
+        "raceName": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "raceName"
+      ],
+      "additionalProperties": false
+    },
+
+    {
+      "title": "Track Information",
+      "type": "object",
+      "properties": {
+        "circuit": {
+          "type": "string"
+        },
+        "driver": {
+          "type": "string"
+        },
+        "trackCondition": {
+          "type": "string"
+        },
+        "weather": {
+          "type": "string"
+        },
+        "temperature": {
+          "type": "number"
+        },
+        "laps": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "circuit",
+        "driver",
+        "trackCondition",
+        "weather",
+        "temperature",
+        "laps"
+      ],
+      "additionalProperties": false
+    },
+
+    {
+      "title": "Race Information",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "RACE_INFO"
+        },
+        "circuit": {
+          "type": "string"
+        },
+        "driver": {
+          "type": "string"
+        },
+        "team": {
+          "type": "string"
+        },
+        "trackCondition": {
+          "type": "string"
+        },
+        "weather": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "circuit",
+        "driver",
+        "team",
+        "trackCondition",
+        "weather"
+      ],
+      "additionalProperties": false
+    },
+
+    {
+      "title": "Telemetry Request",
+      "type": "object",
+      "properties": {
+        "raceName": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "raceName"
+      ],
+      "additionalProperties": false
+    },
+
+    {
+      "title": "Telemetry",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "TELEMETRY"
+        },
+        "speed": {
+          "type": "number"
+        },
+        "rpm": {
+          "type": "integer"
+        },
+        "engineTemperature": {
+          "type": "number"
+        },
+        "ers": {
+          "type": "number"
+        },
+        "drs": {
+          "type": "boolean"
+        },
+        "brakeTemperature": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "type",
+        "speed",
+        "rpm",
+        "engineTemperature",
+        "ers",
+        "drs",
+        "brakeTemperature"
+      ],
+      "additionalProperties": false
+    },
+
+    {
+      "title": "Weather Update",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "WEATHER_UPDATE"
+        },
+        "airTemperature": {
+          "type": "number"
+        },
+        "trackTemperature": {
+          "type": "number"
+        },
+        "rainProbability": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "type",
+        "airTemperature",
+        "trackTemperature",
+        "rainProbability"
+      ],
+      "additionalProperties": false
+    },
+
+    {
+      "title": "Race Finished",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "RACE_FINISHED"
+        },
+        "raceName": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "raceName"
+      ],
+      "additionalProperties": false
+    },
+
+    {
+      "title": "Initial Strategy Request",
+      "type": "object",
+      "properties": {
+        "circuit": {
+          "type": "string"
+        },
+        "driver": {
+          "type": "string"
+        },
+        "trackCondition": {
+          "type": "string"
+        },
+        "weather": {
+          "type": "string"
+        },
+        "raceType": {
+          "type": "string"
+        },
+        "highSkillDriver": {
+          "type": "boolean"
+        },
+        "longRace": {
+          "type": "boolean"
+        },
+        "temperature": {
+          "type": "number"
+        },
+        "laps": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "circuit",
+        "driver",
+        "trackCondition",
+        "weather",
+        "raceType",
+        "highSkillDriver",
+        "longRace",
+        "temperature",
+        "laps"
+      ],
+      "additionalProperties": false
+    },
+
+    {
+      "title": "Initial Strategy Proposal",
+      "type": "object",
+      "properties": {
+        "recommendedTyre": {
+          "type": "string"
+        },
+        "pitStops": {
+          "type": "integer"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "recommendedTyre",
+        "pitStops",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+
+    {
+      "title": "Tyre Decision Request",
+      "type": "object",
+      "properties": {
+        "driver": {
+          "type": "string"
+        },
+        "tyreWear": {
+          "type": "number"
+        },
+        "gripLevel": {
+          "type": "number"
+        },
+        "rainProbability": {
+          "type": "number"
+        },
+        "currentTyre": {
+          "type": "string"
+        },
+        "fuelLevel": {
+          "type": "number"
+        },
+        "currentLap": {
+          "type": "integer"
+        },
+        "totalLaps": {
+          "type": "integer"
+        },
+        "drivingStyle": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "driver",
+        "tyreWear",
+        "gripLevel",
+        "rainProbability",
+        "currentTyre",
+        "fuelLevel",
+        "currentLap",
+        "totalLaps",
+        "drivingStyle"
+      ],
+      "additionalProperties": false
+    },
+
+    {
+      "title": "Tyre Decision Proposal",
+      "type": "object",
+      "properties": {
+        "driver": {
+          "type": "string"
+        },
+        "recommendedTyre": {
+          "type": "string"
+        },
+        "pitRequired": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "drivingStyle": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "driver",
+        "recommendedTyre",
+        "pitRequired",
+        "reason",
+        "drivingStyle"
+      ],
+      "additionalProperties": false
+    },
+
+    {
+      "title": "Tyre Decision Response",
+      "type": "object",
+      "properties": {
+        "driver": {
+          "type": "string"
+        },
+        "accepted": {
+          "type": "boolean"
+        },
+        "newTyre": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "driver",
+        "accepted",
+        "newTyre",
+        "reason"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}
