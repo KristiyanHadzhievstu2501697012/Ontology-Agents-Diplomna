@@ -102,12 +102,6 @@ public class OntologyManager {
                             baseIri
             );
 
-            System.out.println("=== HERMIT RACE CLASSIFICATION TEST ===");
-            System.out.println("Race1 inferred type: " + getInferredRaceType("Race1"));
-            System.out.println("Race2 inferred type: " + getInferredRaceType("Race2"));
-            System.out.println("Race4 inferred type: " + getInferredRaceType("Race4"));
-            System.out.println("Race5 inferred type: " + getInferredRaceType("Race5"));
-            System.out.println("=======================================");
 
         } catch (Exception e) {
             throw new RuntimeException(
