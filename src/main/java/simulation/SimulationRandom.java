@@ -10,7 +10,7 @@ public final class SimulationRandom {
 
     private static long seed = 1L;
 
-    // Единственият java.util.Random в цялата система.
+
     private static Random random = new Random(seed);
 
     private static final Map<String, double[]> streams =
@@ -53,6 +53,7 @@ public final class SimulationRandom {
         createStream("RACE");
         createStream("WEATHER");
         createStream("TELEMETRY");
+        createStream("BASELINE_RANDOM");
     }
 
     private static void createStream(String name) {

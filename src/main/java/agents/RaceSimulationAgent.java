@@ -26,6 +26,9 @@ import messages.RaceInfoMessage;
 import messages.TelemetryMessage;
 import messages.WeatherMessage;
 import messages.RaceControlMessage;
+import model.ExperimentResult;
+import simulation.ExperimentResultCollector;
+import simulation.ExperimentMode;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -43,12 +46,17 @@ public class RaceSimulationAgent extends Agent {
 
     private DatabaseManager databaseManager;
     private boolean historySaved;
+    private ExperimentMode experimentMode =
+            ExperimentMode.AGENTS;
 
 
     private double totalSpeed;
     private double maximumSpeed;
     private int speedMeasurements;
     private boolean resultFrameShown;
+    private boolean headless = false;
+    private long experimentSeed = 1L;
+    private String experimentStyleOverride = null;
 
     private OntologyManager ontologyManager;
     private List<DriverResult> driverResults;
@@ -81,7 +89,6 @@ public class RaceSimulationAgent extends Agent {
 
     @Override
     protected void setup() {
-
 
 
         addBehaviour(new CyclicBehaviour() {
@@ -282,7 +289,7 @@ public class RaceSimulationAgent extends Agent {
             }
         });
 
-        addBehaviour(new TickerBehaviour(this, 2000) {
+        addBehaviour(new TickerBehaviour(this, headless ? 50 : 2000) {
 
             @Override
             protected void onTick() {
@@ -386,7 +393,7 @@ public class RaceSimulationAgent extends Agent {
                                     " sent RACE_FINISHED to TelemetryAgent."
                     );
 
-                    if (!resultFrameShown) {
+                    if (!headless && !resultFrameShown) {
 
                         resultFrameShown = true;
 
@@ -414,6 +421,28 @@ public class RaceSimulationAgent extends Agent {
                                         averageSpeed,
                                         maximumSpeed
                                 )
+                        );
+                    }
+
+                    if (headless && focusResult != null) {
+
+                        ExperimentResultCollector.complete(
+                                new ExperimentResult(
+                                        raceName,
+                                        experimentSeed,
+                                        focusDriver,
+                                        focusResult.getTotalRaceTime(),
+                                        focusResult.getFastestLap(),
+                                        focusResult.getPitStops(),
+                                        focusResult.getCurrentTyre()
+                                )
+                        );
+
+                        System.out.println(
+                                "HEADLESS RESULT READY -> "
+                                        + raceName
+                                        + ", seed="
+                                        + experimentSeed
                         );
                     }
 
@@ -468,11 +497,59 @@ public class RaceSimulationAgent extends Agent {
 
         Object[] args = getArguments();
 
-         raceName = "Race1";
+        raceName = "Race1";
 
         if (args != null && args.length > 0) {
             raceName = args[0].toString();
         }
+
+        if (args != null && args.length > 3) {
+            experimentMode =
+                    ExperimentMode.valueOf(
+                            args[3].toString()
+                    );
+        }
+
+        System.out.println(
+                "Experiment strategy mode: "
+                        + experimentMode
+        );
+
+        if (args != null && args.length > 1) {
+            headless = Boolean.parseBoolean(
+                    args[1].toString()
+            );
+        }
+
+        if (args != null && args.length > 2) {
+            experimentSeed =
+                    Long.parseLong(
+                            args[2].toString()
+                    );
+        }
+
+        if (args != null && args.length > 4) {
+
+            String styleArgument = args[4].toString();
+
+            if (!styleArgument.isBlank()
+                    && !"ONTOLOGY".equalsIgnoreCase(styleArgument)) {
+
+                experimentStyleOverride = styleArgument;
+            }
+        }
+
+        System.out.println(
+                "Experiment style: "
+                        + (experimentStyleOverride != null
+                        ? experimentStyleOverride
+                        : "ONTOLOGY")
+        );
+
+        System.out.println(
+                "RaceSimulationAgent mode: "
+                        + (headless ? "HEADLESS" : "GUI")
+        );
 
         ontologyManager = new OntologyManager();
 
@@ -647,7 +724,13 @@ public class RaceSimulationAgent extends Agent {
         }
 
 
-        if (pitRequired
+        boolean finalPitDecision =
+                shouldPitForExperimentMode(
+                        driverResult,
+                        pitRequired
+                );
+
+        if (finalPitDecision
                 && recommendedTyre != null
                 && !recommendedTyre.isBlank()) {
 
@@ -800,7 +883,9 @@ public class RaceSimulationAgent extends Agent {
             }
 
             String drivingStyle =
-                    ontologyManager.getDrivingStyle(
+                    experimentStyleOverride != null
+                            ? experimentStyleOverride
+                            : ontologyManager.getDrivingStyle(
                             result.getDriver()
                     );
 
@@ -905,7 +990,9 @@ public class RaceSimulationAgent extends Agent {
                     );
 
             String strategy =
-                    ontologyManager.getDrivingStyle(
+                    experimentStyleOverride != null
+                            ? experimentStyleOverride
+                            : ontologyManager.getDrivingStyle(
                             result.getDriver()
                     );
 
@@ -1149,6 +1236,49 @@ public class RaceSimulationAgent extends Agent {
                 minutes,
                 seconds
         );
+    }
+
+    private boolean shouldPitForExperimentMode(
+            DriverResult driverResult,
+            boolean agentPitRequired
+    ) {
+
+        switch (experimentMode) {
+
+            case NO_CHANGE:
+                return false;
+
+            case ONE_STOP:
+
+                int halfwayLap =
+                        Math.max(
+                                1,
+                                totalLaps / 2
+                        );
+
+                return driverResult.getPitStops() == 0
+                        && driverResult.getCompletedLaps()
+                        >= halfwayLap;
+
+            case RANDOM:
+
+                if (driverResult.getPitStops() >= 3) {
+                    return false;
+                }
+
+                double randomDecision =
+                        SimulationRandom.nextDouble(
+                                "BASELINE_RANDOM",
+                                0.0,
+                                1.0
+                        );
+
+                return randomDecision < 0.06;
+
+            case AGENTS:
+            default:
+                return agentPitRequired;
+        }
     }
 
 }

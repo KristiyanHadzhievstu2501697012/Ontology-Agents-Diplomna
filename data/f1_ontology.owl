@@ -857,7 +857,7 @@
         <rdf:type rdf:resource="http://f1-strategy.org/ontology#DrivingStylе"/>
         <ontology:criticalGripThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">30.0</ontology:criticalGripThreshold>
         <ontology:intermediateThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.0</ontology:intermediateThreshold>
-        <ontology:wearThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">70.0</ontology:wearThreshold>
+        <ontology:wearThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.0</ontology:wearThreshold>
         <ontology:wetThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#double">70.0</ontology:wetThreshold>
         <rdfs:comment xml:lang="en">Individual representing balanced in the Formula 1 strategy ontology.</rdfs:comment>
         <rdfs:label xml:lang="en">Balanced</rdfs:label>

@@ -46,7 +46,11 @@ public class Launcher {
                     container.createNewAgent(
                             "RaceSimulationAgent",
                             "agents.RaceSimulationAgent",
-                            new Object[]{raceName, 30}
+                            new Object[]{
+                                    raceName,
+                                    false,
+                                    SimulationRandom.getSeed()
+                            }
                     );
 
             AgentController weatherAgent =
