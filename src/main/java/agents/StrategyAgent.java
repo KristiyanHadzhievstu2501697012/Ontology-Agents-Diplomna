@@ -368,6 +368,18 @@ public class StrategyAgent extends Agent {
                         + "; BrakeTemperature="
                         + telemetry.brakeTemperature
         );
+
+        speed = telemetry.speed;
+        rpm = telemetry.rpm;
+        engineTemperature = telemetry.engineTemperature;
+        ersLevel = telemetry.ers;
+        drsEnabled = telemetry.drs;
+        brakeTemperature = telemetry.brakeTemperature;
+
+        telemetryReceived = true;
+
+        finalizeDecisionIfReady();
+
     }
 
 
