@@ -43,7 +43,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class RaceSimulationAgent extends Agent {
 
-
+    private static final double PIT_STOP_TIME_PENALTY = 25.0;
     private DatabaseManager databaseManager;
     private boolean historySaved;
     private ExperimentMode experimentMode =
@@ -735,6 +735,14 @@ public class RaceSimulationAgent extends Agent {
                 && !recommendedTyre.isBlank()) {
 
             driverResult.addPitStop();
+
+            driverResult.addPitStopTime(PIT_STOP_TIME_PENALTY);
+            System.out.println(
+                   "PIT TIME TEST | Driver=" + driverResult.getDriver()
+                            + " | Stops=" + driverResult.getPitStops()
+                            + " | Penalty=" + PIT_STOP_TIME_PENALTY
+                            + " | TotalRaceTime=" + driverResult.getTotalRaceTime()
+            );
 
             driverResult.setCurrentTyre(
                     recommendedTyre

@@ -81,6 +81,16 @@ public class DriverResult {
         pitStops++;
     }
 
+    public void addPitStopTime(double seconds) {
+        if (seconds < 0.0) {
+            throw new IllegalArgumentException(
+                    "Pit stop time cannot be negative"
+            );
+        }
+
+        totalRaceTime += seconds;
+    }
+
     public double getTyreWear() {
         return tyreWear;
     }
